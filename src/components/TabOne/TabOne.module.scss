@@ -1,0 +1,11 @@
+@import '../../assets/mixins';
+.main {
+  margin-top: 17px;
+  @include cera-regular;
+  font-size: 18px;
+  text-wrap: balance;
+  &__list {
+    margin: 24px 0;
+    padding-left: 28px;
+  }
+}

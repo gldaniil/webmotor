@@ -1,0 +1,52 @@
+@import url('../../fonts/_fonts.scss'), '../../assets/variables',
+  '../../assets/mixins';
+.tab {
+  width: 718px;
+  background-color: $primary-background;
+  cursor: pointer;
+  @media (max-width: 1200px) {
+    width: auto;
+  }
+  &--active {
+    background: #0078ee;
+    & .tab__title {
+      color: $white;
+    }
+    & .tab__text {
+      color: $white;
+    }
+    & .tab__button {
+      color: $active-color;
+      background-color: $white;
+    }
+  }
+  &__inner {
+    margin: 26.42px 20px 21.41px;
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__button {
+    width: 27px;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 5px;
+    color: $white;
+    background-color: $active-color;
+  }
+  &__title {
+    @include cera-medium;
+    font-size: 24px;
+  }
+  &__text {
+    margin-top: 25px;
+    @include cera-regular;
+    font-size: 16px;
+    text-wrap: balance;
+  }
+}

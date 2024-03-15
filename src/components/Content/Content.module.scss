@@ -1,0 +1,41 @@
+@import '../../assets/variables', '../../assets/mixins';
+
+.content {
+  width: 100%;
+  height: 460px;
+  background-color: $primary-background;
+  line-height: auto;
+  &__container {
+    height: calc(100% - 40px);
+    margin: 20px 21px;
+    position: relative;
+  }
+  &__inner {
+    position: relative;
+    max-height: 367px;
+    overflow-y: scroll;
+    scrollbar-width: thin;
+    scrollbar-color: #0078ee #adb6bf;
+  }
+  &__title {
+    @include cera-medium;
+    font-size: 32px;
+  }
+  &__button {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    border: none;
+    border-radius: 5px;
+    @include cera-regular;
+    font-size: 18px;
+    color: $white;
+    background-color: $active-color;
+    cursor: pointer;
+    transition: background-color 0.25s ease-in-out;
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+}

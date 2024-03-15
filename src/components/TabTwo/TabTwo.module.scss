@@ -1,0 +1,44 @@
+@import '../../assets/variables', '../../assets/mixins', '../../fonts/fonts';
+.main {
+  margin-top: 24px;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 27px;
+  }
+  &__row {
+    position: relative;
+  }
+  &__input {
+    width: 295px;
+    height: 45px;
+    border: none;
+    border-radius: 10px;
+    padding: 12.5px 19.5px;
+    background-color: $white;
+    outline: none;
+    font-size: 14px;
+    line-height: 1.4;
+    &:hover {
+      border: 1px solid $active-color;
+    }
+    &:focus ~ .main__placeholder,
+    &:not(:placeholder-shown) ~ .main__placeholder {
+      transform: translateY(-15px) scale(0.75);
+    }
+    @media (max-width: 1200px) {
+      width: 100%;
+    }
+  }
+  &__placeholder {
+    position: absolute;
+    left: 19px;
+    top: 12.5px;
+    color: $scroll-bar-color;
+    transition:
+      transform 0.25s,
+      color 0.25s;
+  }
+}

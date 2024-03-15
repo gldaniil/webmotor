@@ -1,0 +1,26 @@
+@import './assets/variables';
+.App {
+  background-color: $white;
+  &__container {
+    max-width: 1600px;
+    margin: 224px auto;
+    @media (max-width: 1200px) {
+      margin: 151px auto;
+    }
+  }
+  &__inner {
+    margin: 0 60px;
+    display: flex;
+    gap: 45px;
+    @media (max-width: 1200px) {
+      margin: 0 20px;
+      flex-direction: column;
+    }
+  }
+}
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 1.2;
+}
